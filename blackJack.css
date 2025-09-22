@@ -1,4 +1,9 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
 body {
   min-height: 100vh;
   display:flex;
@@ -7,8 +12,11 @@ body {
   background: radial-gradient(circle at 10% 10%, #064, #013220 60%);
   font-family: "Poppins", system-ui, sans-serif;
   color: #fff;
-  padding: 20px;
+  padding: 25px;
+  margin-left: 95px;
+  margin-top: 20px;
 }
+
 #wrapper {
   width: 360px;
   background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.45));
@@ -18,16 +26,44 @@ body {
   text-align:center;
   border: 1px solid rgba(255,215,0,0.08);
 }
-h1 { color: goldenrod; font-size: 1.8rem; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
-#message-el { font-style: italic; margin-bottom: 12px; }
-.stats { display:flex; justify-content:space-between; gap:8px; margin: 8px 0 12px; }
+
+h1 { 
+  color: goldenrod; 
+  font-size: 1.8rem; 
+  margin-bottom: 10px; 
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6); 
+}
+
+#message-el { 
+  font-style: italic; 
+  margin-bottom: 16px; 
+}
+
+/* Stats container */
+.stats { 
+  display:flex; 
+  flex-direction: column;
+  justify-content:space-between; 
+  gap:8px; 
+  margin: 10px 0 20px;  /* extra space below stats */
+}
+
+/* Each stat box */
 #cards-el, #sum-el, #player-el {
   background: rgba(255,255,255,0.03);
   padding: 10px;
   border-radius: 8px;
   font-weight:600;
+  margin-bottom: 14px; /* spacing between each */
 }
-.btn-container { display:grid; gap:10px; margin-top:14px; }
+
+/* Button container */
+.btn-container { 
+  display:grid; 
+  gap:12px; 
+  margin-top: 20px; /* push buttons down */
+}
+
 .btn {
   padding: 10px 12px;
   border-radius: 999px;
@@ -38,8 +74,35 @@ h1 { color: goldenrod; font-size: 1.8rem; margin-bottom: 10px; text-shadow: 0 2p
   color: #016f32;
   transition: transform .12s ease, box-shadow .12s ease;
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,0.35); }
-.btn:disabled { opacity: 0.6; cursor: not-allowed; transform:none; box-shadow:none; }
-.outline { background:transparent; border:1px solid rgba(255,255,255,0.12); color: #fff; }
-footer { margin-top:12px; font-size:0.9rem; color: #eef; opacity:0.9; }
-.small { font-size:0.85rem; color:#dfe; opacity:0.9; }
+
+.btn:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35); 
+}
+
+.btn:disabled { 
+  opacity: 0.6; 
+  cursor: not-allowed; 
+  transform:none; 
+  box-shadow:none; 
+}
+
+.outline { 
+  background:transparent; 
+  border:1px solid rgba(255,255,255,0.12); 
+  color: #fff; 
+}
+
+footer { 
+  margin-top:16px; 
+  font-size:0.9rem; 
+  color: #eef; 
+  opacity:0.9; 
+}
+
+.small { 
+  margin-top: 7px;
+  font-size:0.85rem; 
+  color:#dfe; 
+  opacity:0.9; 
+}
